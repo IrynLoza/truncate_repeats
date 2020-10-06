@@ -17,7 +17,16 @@ numbers:
 
 def truncate(string):
     """Truncate repeating characters in a string."""
+    result = ''
 
+    for i in range(len(string)-1):
+        if string[i] != string[i+1]:
+            result+= string[i]
+    result+= string[-1]
+
+    return result       
+
+        
 
 if __name__ == '__main__':
     import doctest
